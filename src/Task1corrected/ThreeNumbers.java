@@ -1,11 +1,14 @@
-package Task1;
+package Task1corrected;
+
+import java.util.Scanner;
 
 public class ThreeNumbers {
-
     public static void main(String[] args) {
-        int firstNumber = 1;
-        int secondNumber = 2;
-        int thirdNumber = 3;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите три целых числа: ");
+        int firstNumber = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
+        int thirdNumber = scanner.nextInt();
         identicalNumbers(firstNumber, secondNumber, thirdNumber);
     }
 

@@ -1,9 +1,12 @@
-package Task1;
+package Task1corrected;
+
+import java.util.Scanner;
 
 public class AverageValue {
-
     public static void main(String[] args) {
-        int number = 654598;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число:");
+        int number = scanner.nextInt();
         findAverageArithmetic(number);
         findAverageGeometrical(number);
     }
@@ -12,9 +15,8 @@ public class AverageValue {
         int composition = 1;
         double averageGeometrical;
         int quantityOfNumbers = 0;
-        int lastNumber;
         while (number > 0) {
-            lastNumber = number % 10;
+            int lastNumber = number % 10;
             composition *= lastNumber;
             number = (number - lastNumber) / 10;
             quantityOfNumbers++;
@@ -25,11 +27,10 @@ public class AverageValue {
 
     private static void findAverageArithmetic(int number) {
         int sum = 0;
-        int lastNumber;
         double averageArithmetic;
         int quantityOfNumbers = 0;
         while (number > 0) {
-            lastNumber = number % 10;
+            int lastNumber = number % 10;
             sum += lastNumber;
             number = (number - lastNumber) / 10;
             quantityOfNumbers++;

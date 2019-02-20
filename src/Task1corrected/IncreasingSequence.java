@@ -1,9 +1,12 @@
-package Task1;
+package Task1corrected;
+
+import java.util.Scanner;
 
 public class IncreasingSequence {
-
     public static void main(String[] args) {
-        int number = 1357;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число:");
+        int number = scanner.nextInt();
         int[] numbers = numberToArray(number);
         isIncreasingSequence(numbers);
     }
